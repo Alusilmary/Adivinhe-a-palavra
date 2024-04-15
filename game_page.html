@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adivinhe a Palavra!</title>
+<!--links bootstrap-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="game.css"><!--link css-->
+</head>
+<body>
+<!--h4(exibe o nome do jogador) span(exibe o placar do jogador)-->
+<h4 id="player1_name"></h4> <span id="player1_score"></span>
+<br>
+<h4 id="player2_name"></h4> <span id="player2_score"></span>
+
+<div class="container">
+	<div style="text-align: center;">
+		<h2 style="color: white;">Adivinhe a Palavra!</h2>
+		<h3 id="player_question"></h3><!--nome do jogador responsável pelo turno de pergunta-->
+		<h3 id="player_answer"></h3><!--nome do jogador responsável pelo turno de resposta-->
+
+		<div id="output" class="col-lg-6"> </div>
+		<!--o id dessa div irá atualizá-la com a palavra, a caixa de entrada e o botão verificar-->
+		<!--essa div também terá uma classe bootstrap para definir a width dela para obter um tamanho proporcional a 50% da tela-->
+
+		<br>
+		<br>
+		<label>Sua palavra: <b style="color: red">Use uma palavra com 5 ou mais letras
+		</b>
+		</label>
+		<input type="text" id="word" class="form-control" placeholder="Palavra">
+		<!--caixa de entrada par o responsável pelo turno de pergunta digitar sua palavra-->
+		<!--id- será utilizada para se referir e obter o valor dela-->
+		<!--form-control - classe bootstrap que adiciona padding(preenchimento), margin(margem), border(borda)-->
+		<!--placeholder- dica sobre o que deve ser inserido nela-->
+		<br>
+		<button onclick="send()" class="btn btn-success" style="width: 30%;">Enviar</button>
+		<!--botão que irá obter a palavra inserida na caixa de entrada-->
+		<!--onclick- irá obter e manipular(remover algumas letras) a palavra inserida e exibir na div com id="output"-->
+		<!--terá a classe bootstrap btn e btn-success e também teremos um estilo de largura de 30%-->
+	</div>
+</div>
+
+<script src="game_page.js"></script>
+</body>
+</html>
